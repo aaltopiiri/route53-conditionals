@@ -59,7 +59,7 @@ module "acm_request_certificate" {
 //Latency Policy
 
 resource "aws_route53_record" "a-latency-us-east-1" {
-  count   = var.is_alb ? 1 : 0  
+  count          = var.is_alb ? 1 : 0
   zone_id        = data.aws_route53_zone.zone.zone_id
   name           = "${var.zone_name}"
   type           = "A"
@@ -77,7 +77,7 @@ resource "aws_route53_record" "a-latency-us-east-1" {
 
 
 resource "aws_route53_record" "aaaa-latency-us-east-1" {
-    count   = var.is_alb ? 1 : 0
+  count          = var.is_alb ? 1 : 0
   zone_id        = data.aws_route53_zone.zone.zone_id
   name           = "${var.zone_name}"
   type           = "AAAA"
@@ -172,7 +172,7 @@ resource "aws_route53_record" "aaaa-failover-secondary-eu-west-1" {
 //Latency Policy eu-west-1
 
 resource "aws_route53_record" "a-latency-eu-west-1" {
-  count   = var.is_alb ? 1 : 0
+  count          = var.is_alb ? 1 : 0
   zone_id        = data.aws_route53_zone.zone.zone_id
   name           = "${var.zone_name}"
   type           = "A"
@@ -188,7 +188,7 @@ resource "aws_route53_record" "a-latency-eu-west-1" {
 }
 
 resource "aws_route53_record" "aaaa-latency-eu-west-1" {
-  count   = var.is_alb ? 1 : 0
+  count          = var.is_alb ? 1 : 0
   zone_id        = data.aws_route53_zone.zone.zone_id
   name           = "${var.zone_name}"
   type           = "AAAA"
@@ -282,7 +282,7 @@ resource "aws_route53_record" "aaaa-failover-secondary-ap-south-1" {
 //Latency Policy ap-south-1
 
 resource "aws_route53_record" "a-latency-ap-south-1" {
-  count   = var.is_alb ? 1 : 0
+  count          = var.is_alb ? 1 : 0
   zone_id        = data.aws_route53_zone.zone.zone_id
   name           = "${var.zone_name}"
   type           = "A"
@@ -298,7 +298,7 @@ resource "aws_route53_record" "a-latency-ap-south-1" {
 }
 
 resource "aws_route53_record" "aaaa-latency-ap-south-1" {
-  count   = var.is_alb ? 1 : 0
+  count          = var.is_alb ? 1 : 0
   zone_id        = data.aws_route53_zone.zone.zone_id
   name           = "${var.zone_name}"
   type           = "AAAA"
