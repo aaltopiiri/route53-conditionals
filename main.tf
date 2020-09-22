@@ -312,3 +312,41 @@ resource "aws_route53_record" "aaaa-latency-ap-south-1" {
     evaluate_target_health = false
   }
 }
+resource "aws_route53_health_check" "health_check_us" {
+  fqdn              = "example.com"
+  port              = 80
+  type              = "HTTP"
+  resource_path     = "/"
+  failure_threshold = "5"
+  request_interval  = "30"
+
+  tags = {
+    Name = "tf-us-health-check"
+  }
+}
+
+resource "aws_route53_health_check" "health_check_eu" {
+  fqdn              = "example.com"
+  port              = 80
+  type              = "HTTP"
+  resource_path     = "/"
+  failure_threshold = "5"
+  request_interval  = "30"
+
+  tags = {
+    Name = "tf-eu-health-check"
+  }
+}
+
+resource "aws_route53_health_check" "health_check_ap" {
+  fqdn              = "example.com"
+  port              = 80
+  type              = "HTTP"
+  resource_path     = "/"
+  failure_threshold = "5"
+  request_interval  = "30"
+
+  tags = {
+    Name = "tf-ap-health-check"
+  }
+}
