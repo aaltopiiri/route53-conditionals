@@ -1,0 +1,8 @@
+zone_name               = "aaltopiiri.info"
+shared_credentials_file = "~/.aws/credentials"
+//shared_credentials_file = "/var/lib/jenkins/.aws/credentials"
+profile = "default"
+region  = "us-east-1"
+elb_us_zone_id          = "Z35SXDOTRQ7X7K"
+elb_eu_zone_id          = "Z32O12XQLNTSW2"
+elb_ap_zone_id          = "ZP97RAFLXTNZK"
